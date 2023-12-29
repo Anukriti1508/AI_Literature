@@ -1,0 +1,58 @@
+Reference: https://git-scm.com/docs/gittutorial
+
+*Primary setup for local setting*
+1. For documentation and help use:
+$ git --help
+
+2. Introduce yourself to Git with your name and public email address before doing any operation:
+$ git config --global user.name "Your Name Comes Here"
+$ git config --global user.email you@yourdomain.example.com
+
+3.Create and go inside the folder where you want to initialize git repository:
+$ mkdir folder_x
+$ cd folder_x
+
+4. Initialize an empty git repository:
+$ git init
+
+*You’ve now initialized the working directory—​you may notice a new directory created, named .git, you can see hidden files through ls -a*
+*Add your code and files*
+
+5. Check status of files added:
+$ git status
+
+6. Add contents:
+$ git add .
+
+7. You can see what is about to be committed using :
+$ git diff --cached
+
+8. The changes are now stored in a temporary staging area which Git calls the "index". 
+You can permanently store the contents of the index in the repository with:
+$ git commit -m "<message">
+
+9. Commit without using git add
+$ git commit -a
+
+*Managing branches*
+1. Creating a new branch:
+$ git branch experimental
+
+2. seeing available branches
+$ git branch
+
+*you’ll get a list of all existing branches*:
+
+  experimental
+* master
+
+3. Change branches:
+$ git switch experimental
+
+4. To merge the changes made in experimental into master, run:
+$ git merge experimental
+
+5. Delete Branch
+$ git branch -d experimental
+
+
